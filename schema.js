@@ -9,3 +9,9 @@ export const cakesSchema = Joi.object({
 export const imageCakesSchema = Joi.object({
     image: Joi.string().pattern(/^https?:\/\/(?:www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b(?:[-a-zA-Z0-9()@:%_\+.~#?&\/=]*)$/).required()
 })
+
+export const clientSchema = Joi.object({
+    name: Joi.string().required(),
+    address: Joi.string().required(),
+    phone: Joi.string().pattern(/^[0-9]{10,11}$/).required()
+})

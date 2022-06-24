@@ -3,7 +3,7 @@ import { imageCakesSchema } from "../schema.js";
 
 export async function NewCakesMiddlewares(req, res, next) {
     const {name, price, description, image} = req.body;
-    console.log(image)
+    
     const validationCakes = cakesSchema.validate({
         name,
         price,

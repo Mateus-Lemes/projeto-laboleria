@@ -1,9 +1,9 @@
  CREATE TABLE "cakes" (
 	"id" serial NOT NULL,
-	"name" varchar NOT NULL,
+	"name" varchar NOT NULL UNIQUE,
 	"price" numeric NOT NULL,
 	"image" varchar NOT NULL UNIQUE,
-	"description" TEXT NOT NULL
+	"description" TEXT
 );
 
 
@@ -20,6 +20,6 @@ CREATE TABLE "orders" (
 	"clientId" integer NOT NULL,
 	"cakeId" integer NOT NULL,
 	"quantity" integer NOT NULL,
-	"createdAt" serial NOT NULL,
+	"createdAt" timestamp NOT NULL,
 	"totalPrice" numeric NOT NULL
 );
