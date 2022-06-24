@@ -1,6 +1,5 @@
 import db from "../db.js";
 
-
 export async function NewClientController(req, res) {
 const {name, address, phone} = req.body; 
     try {

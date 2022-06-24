@@ -15,3 +15,10 @@ export const clientSchema = Joi.object({
     address: Joi.string().required(),
     phone: Joi.string().pattern(/^[0-9]{10,11}$/).required()
 })
+
+export const orderSchema = Joi.object({
+    clientId: Joi.number().required(),
+    cakeId: Joi.number().required(),
+    quantity: Joi.number().integer().positive().less(5).required(),
+    totalPrice: Joi.number().required()
+})
